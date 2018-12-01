@@ -15,6 +15,11 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.home_timeline()
+count = 50
+language = "ISO 639-1 alpha-2 (en)"
+#geo_code =
+
+#public_tweets = api.search("hello",lang = language, rpp = 10)
+public_tweets = api.search ("Aaron", rpp = count)
 for tweet in public_tweets:
     print(tweet.text)
