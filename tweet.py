@@ -1,12 +1,20 @@
-import json
+# from tweepy.streaming import StreamListener
+# from tweepy import OAuthHandler
+# from tweepy import Stream
 
-# Enter your keys/secrets as strings in the following fields
-credentials = {}
-credentials['CONSUMER_KEY'] = rTVQFs0E39iDlT9z2HjtvoypP
-credentials['CONSUMER_SECRET'] = i4ne9Z2k9cThWjR0FD2YMotGRT9qJcFUq6axkQHLZRXGfneqOm
-credentials['ACCESS_TOKEN'] = 316920647-EqVEVvor9VYZ73beLSCXfwUsmGcsjCM9yxxgjnb5
-credentials['ACCESS_SECRET'] = QF41oHaAVHExCKNZxO19fwoBzXcVzdGlpEpIUylFF1P4r
+import tweepy
 
-# Save the credentials object to file
-with open("twitter_credentials.json", "w") as file:
-    json.dump(credentials, file)
+consumer_key = "rTVQFs0E39iDlT9z2HjtvoypP"
+consumer_secret = "i4ne9Z2k9cThWjR0FD2YMotGRT9qJcFUq6axkQHLZRXGfneqOm"
+access_token = "316920647-EqVEVvor9VYZ73beLSCXfwUsmGcsjCM9yxxgjnb5"
+access_token_secret = "QF41oHaAVHExCKNZxO19fwoBzXcVzdGlpEpIUylFF1P4r"
+
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+
+api = tweepy.API(auth)
+
+public_tweets = api.home_timeline()
+for tweet in public_tweets:
+    print(tweet.text)
