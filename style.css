@@ -1,11 +1,12 @@
 body{
-  background-color: #becbe0;
+  background-color: #00FFFF;
 }
 
 h1{
-  text-align: center;
+  background-color: #00FFFF;
+  /* color: navy; */
+  /* margin-left: 20px; */
 }
-
-.form{
-  text-align: center;
+p {
+  background-color: #00FFFF;
 }
