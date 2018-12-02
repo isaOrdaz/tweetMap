@@ -15,6 +15,16 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.home_timeline()
+count_of_tweets = 10
+number_of_tweets = 0
+language = 'en'
+
+public_tweets = api.search("school", language, count_of_tweets)
 for tweet in public_tweets:
-    print(tweet.text)
+    if tweet.user.location != None:
+        if number_of_tweets < count_of_tweets:
+            print(tweet.text)
+            print(tweet.user.location)
+            number_of_tweets += 1
+print(number_of_tweets)
+
