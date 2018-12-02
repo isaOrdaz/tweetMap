@@ -15,6 +15,16 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.home_timeline()
+count_of_tweets = 10
+language = "en"
+number_of_tweets = 0
+
+#public_tweets = api.search("hello",lang = language, rpp = 10)
+public_tweets = api.search ("food", count = count_of_tweets,lang = language)
 for tweet in public_tweets:
+    number_of_tweets += 1
     print(tweet.text)
+
+print(number_of_tweets)
+
+#grab user name

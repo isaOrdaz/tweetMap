@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 body {
   /* background-color: magenta; */
 }
 
+=======
+body{
+  background-color: #00FFFF;
+>>>>>>> 95645207412940001ede7224e66ed57c33381248
 }
 
 h1{
-  text-align: center;
+  background-color: #00FFFF;
+  /* color: navy; */
+  /* margin-left: 20px; */
 }
-
-.form{
-  text-align: center;
+div {
+  background-color: #00FFFF
+}
+p {
+  background-color: #00FFFF;
 }
