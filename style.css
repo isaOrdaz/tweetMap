@@ -7,6 +7,9 @@ h1{
   /* color: navy; */
   /* margin-left: 20px; */
 }
+div {
+  background-color: #00FFFF
+}
 p {
   background-color: #00FFFF;
 }
