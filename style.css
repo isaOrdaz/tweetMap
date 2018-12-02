@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-body {
-  /* background-color: magenta; */
-}
-
-=======
 body{
-  background-color: #00FFFF;
->>>>>>> 95645207412940001ede7224e66ed57c33381248
+  background-color: #becbe0;
 }
-
-h1{
-  background-color: #00FFFF;
-  /* color: navy; */
-  /* margin-left: 20px; */
+ h1{
+  text-align: center;
 }
-div {
-  background-color: #00FFFF
-}
-p {
-  background-color: #00FFFF;
+ .form{
+  text-align: center;
 }
